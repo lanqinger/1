@@ -18,6 +18,19 @@ SELECT  substr('330125352447367',length('330125352447367')-9,10) from dual;
 SELECT  substr('330125352447367',length('330125352447367')-8,9) from dual;
 去掉最后一位截取后9位
 SELECT  substr('91330110352447367A',length('91330110352447367A')-9,9) from dual;
+5、行转列decode/case when then
+方法一：SELECT t.studentcode,t.studentname,
+sum(decode(t.subject,'English',t.grade,0))as English,
+sum(decode(t.subject,'Chineses',t.grade,0))as Chineses,
+sum(decode(t.subject,'Math',t.grade,0))as Math
+FROM px_studentinfo t
+group by t.studentcode,t.studentname;
+方法二：SELECT t.studentcode,t.studentname,
+sum(case when t.subject = 'English' then t.grade else 0 end)English,
+sum(case when t.subject = 'Chineses' then t.grade else 0 end)Chineses,
+sum(case when t.subject = 'Math' then t.grade else 0 end)Math
+FROM px_studentinfo t
+group by t.studentcode,t.studentname;
 
 
 
