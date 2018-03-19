@@ -1,0 +1,16 @@
+基本函数
+1、大小写转换UPPER/ LOWER
+SELECT UPPER('self_isvip') FROM dual;--SELF_ISVIP
+SELECT LOWER('SELF_ISVIP') FROM dual;--self_isvip
+2、截取字符串substr
+----截取后10位/从第2位开始截取长度为5的字符串
+SELECT substr(C.CUST_TAX_CODE,-10,length(C.CUST_TAX_CODE)), --- 0903382X01
+substr(C.CUST_TAX_CODE,2,5) ---- 30184
+FROM CUS_ORG_CUSTOMER C WHERE C.CUST_TAX_CODE IN('33018419820903382X01');
+3、日期add_months/interval
+select add_months(sysdate,-1) from dual ;
+select sysdate + interval '5' day from dual;
+select sysdate + interval '10' minute from dual;
+select sysdate + interval '2' year from dual;
+
+
