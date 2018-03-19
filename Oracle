@@ -12,5 +12,12 @@ select add_months(sysdate,-1) from dual ;
 select sysdate + interval '5' day from dual;
 select sysdate + interval '10' minute from dual;
 select sysdate + interval '2' year from dual;
+4、截取字符串后10位
+SELECT  substr('330125352447367',length('330125352447367')-9,10) from dual;
+截取字符串后9位
+SELECT  substr('330125352447367',length('330125352447367')-8,9) from dual;
+去掉最后一位截取后9位
+SELECT  substr('91330110352447367A',length('91330110352447367A')-9,9) from dual;
+
 
 
