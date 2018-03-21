@@ -35,20 +35,20 @@ public class Json {
 	}
 	
 	public static void main(String[] args) {
-		String result = "{\"isSuccess\":\"true\",\"list\":[{\"name\":\"ÃÃ–Ã’Â¶\",\"age\":\"21\"},{\"name\":\"Ã’Â¶ÃƒÃˆ\",\"age\":\"20\"}]}";
+		String result = "{\"isSuccess\":\"true\",\"list\":[{\"name\":\"æ—å¶\",\"age\":\"21\"},{\"name\":\"å¶èŒ\",\"age\":\"20\"}]}";
 		Map<String,Object> map = getJson(result);
 		System.out.println(map);
 		
 		Map<String, Object> map2 = new HashMap<String, Object>();
 		map2.put("success","1");
-		map2.put("message", "Ö´ĞĞ³É¹¦£¡");
+		map2.put("message", "æ‰§è¡ŒæˆåŠŸï¼");
 		JSONObject json = transformJson(map2);
 		System.out.println(json);
 		
 		List<String> list = new ArrayList<String>();
-		list.add("º¼ÖİÊĞ");
-		list.add("ÎÂÖİÊĞ");
-		list.add("ÀöË®ÊĞ");
+		list.add("æ­å·å¸‚");
+		list.add("æ¸©å·å¸‚");
+		list.add("ä¸½æ°´å¸‚");
 		JSONArray array = transformJsonArray(list);
 		System.out.println(array);
 	}
