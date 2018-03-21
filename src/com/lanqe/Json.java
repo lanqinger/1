@@ -1,3 +1,4 @@
+
 package com.lanqe;
 
 import java.util.ArrayList;
@@ -24,8 +25,13 @@ public class Json {
 		return map;
 	}
 	
+	public static JSONArray transformJsonArray(List<String> list) {
+		JSONArray array = JSONArray.fromObject(list);
+		return array;
+	}
+	
 	public static void main(String[] args) {
-		String result = "{\"isSuccess\":\"true\",\"list\":[{\"name\":\"��Ҷ\",\"age\":\"21\"},{\"name\":\"Ҷ��\",\"age\":\"20\"}]}";
+		String result = "{\"isSuccess\":\"true\",\"list\":[{\"name\":\"ÁÖÒ¶\",\"age\":\"21\"},{\"name\":\"Ò¶ÃÈ\",\"age\":\"20\"}]}";
 		Map<String,Object> map = getJson(result);
 		System.out.println(map);
 	}
