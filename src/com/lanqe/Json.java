@@ -46,11 +46,11 @@ public class Json {
 		System.out.println(json);
 		
 		List<String> list = new ArrayList<String>();
-		list.add("杭州市");
-		list.add("温州市");
 		list.add("丽水市");
 		list.add("宁波市");
 		list.add("台州市");
+		list.add("杭州市");
+		list.add("温州市");
 		JSONArray array = transformJsonArray(list);
 		System.out.println(array);
 	}
